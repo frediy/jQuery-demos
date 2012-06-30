@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+<style type="text/css">
+body
+{
+	font-family: Helvetica;
+	font-size: 5px;
+}
+table
+{
+	position: fixed;
+	top: 50%;
+	width: 100%;
+}
+</style>
+
+<script type="text/javascript" src="jquery.js"></script>
+
+<script type="text/javascript">
+var TEXTLINE = 'Small text, hard to read. Thumbs up, jQuery!';
+
+$(document).ready(function(){
+	for (var i = 0; i < TEXTLINE.length; i++) {
+		$("td.id" + i).mouseover(function(){
+			// $("p.id" + i).hide();
+			$(this).animate({fontSize:"40px"}, "slow");
+		});
+	};
+});
+</script>
+</head>
+
+
+<body>
+<center>
+
+<table>
+<tr>
+<script type="text/javascript">
+	var writeString = '';
+
+	for (var i = 0; i < TEXTLINE.length; i++) {
+		writeString += '<td class=id' + i + '>' + TEXTLINE[i] + '</td>';
+	}
+
+	document.write(writeString);
+</script>
+</tr>
+</table>
+
+</center>
+</body>
+</html>

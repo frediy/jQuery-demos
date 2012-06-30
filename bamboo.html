@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Bamboo</title>
+
+<script type="text/javascript" src="jquery.js"></script>
+
+
+
+<script type="text/javascript">
+
+var TREES = 5;
+var STEMS = 4;
+
+var getId = function(i, j)
+{
+	return j*5 + i;
+}
+
+$(document).ready(function(){
+  $("button").click(function(){
+  	for (var j = 1; j < TREES+1; j++)
+  	{
+	  	for (var i = 1; i < STEMS+1; i++)
+	  	{
+	    	$(".stem" + getId(i, j)).slideDown(i*1000+i*Math.floor(Math.random()*2000));
+	    }
+	}
+  });
+});
+
+document.writeln('<style type="text/css">');
+
+for (var j = 0; j < TREES+1; j++)
+for (var i = 1; i < STEMS+1; i++)
+{
+	document.writeln('div.stem' + getId(i, j) + '');
+	document.writeln('{	margin:0px;');
+	document.writeln('	padding:5px;');
+	document.writeln('	text-align:center;');
+	document.writeln('	background:#456645;');
+	document.writeln('	border:solid 1px #e5eecc;');
+	document.writeln('}');
+	document.writeln('div.stem' + getId(i, j));
+	document.writeln('{');
+	document.writeln('	width:' + Math.floor(40/(i)-Math.random()*10) + 'px;');
+	document.writeln('	height:' + Math.floor(350/STEMS+Math.random()*30) + 'px;');
+	document.writeln('	display:none;');
+	document.writeln('}');
+}
+
+	document.writeln('table.fix');
+	document.writeln('{');
+	document.writeln('border:solid 0px #c3c3c3;	');
+	document.writeln('width:800px;');
+	document.writeln('height:600px;');
+	document.writeln('}');
+	document.writeln('td');
+	document.writeln('{');
+	document.writeln('vertical-align:bottom;');
+	document.writeln('}');
+	document.writeln('</style>');
+
+</script>
+
+<style type="text/css">
+button
+{
+	   font-size:30px;
+   font-family:Arial Black,sans-serif;
+   color:#669966;
+   width:200px;
+   height:50px;
+   background-color:#FFFFFF;
+   border-style:solid;
+   border-color:#666600;
+   border-width:0px;
+
+	background-color: white;
+
+}
+</style>
+</head>
+
+<body>
+
+<center>
+<table class="fix">
+<tr>
+
+<script type="text/javascript">
+for (var j = 0; j<TREES+1; j++)
+{	
+	document.writeln('	<td align="center">');
+	for (var i = STEMS+1; i >= 1; i--) {
+		document.writeln('		<div class="stem' + getId(i, j) + '">');
+		document.writeln('		<p></p>');
+		document.writeln('		</div>');
+	}
+	 document.writeln('	</td>');
+}
+</script>
+
+</tr>
+</table>
+<br>
+<br>
+<br>
+<button>g&nbsp;&nbsp;&nbsp;r&nbsp;&nbsp;&nbsp;o&nbsp;&nbsp;&nbsp;w</button>
+</center>
+
+</body>
+
+</html>

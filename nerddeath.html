@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style type="text/css">
+<!--
+body {cursor: url(http://www.rw-designer.com/cursor-extern.php?id=2698);}
+-->
+</style>
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+var hideTags = new Array();
+
+var addToArray = function(tagArray, element)
+{
+	tagArray.unshift(element)
+}
+
+var declareTagHides = function(tagArray)
+{
+	for (tag in tagArray)
+	{
+		$(tag).hide();
+	}		
+}
+
+$(document).ready(function(){
+
+
+
+$("button").mouseover(function(){
+	$(this).fadeOut();
+	$("h1").toggle();
+	// addToArray(hideTags, this);
+});
+
+});
+</script>
+</head>
+
+<body>
+
+<center>
+
+<script type="text/javascript">
+for (var i = 0; i < 15; i++) {
+	for (var j = 0; j < 15; j++) {
+		document.writeln('<button>(@_@^)</button>');
+	}	
+	document.writeln('<br>');
+	if (i%5 == 0)
+	{
+	}
+}
+</script>
+
+<h1>DEATH UNTO THE NERDS!</h1><br>
+</center>
+
+</body>
+
+</html>
